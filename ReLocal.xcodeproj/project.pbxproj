@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F1BB06C127E90E3400354182 /* ReLocalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB06C027E90E3400354182 /* ReLocalApp.swift */; };
-		F1BB06C327E90E3400354182 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB06C227E90E3400354182 /* ContentView.swift */; };
 		F1BB06C527E90E3700354182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BB06C427E90E3700354182 /* Assets.xcassets */; };
 		F1BB06C827E90E3700354182 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BB06C727E90E3700354182 /* Preview Assets.xcassets */; };
 		F1BB06D227E91A6800354182 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB06D127E91A6700354182 /* SplashScreen.swift */; };
 		F1BB06D427E9215B00354182 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB06D327E9215B00354182 /* MainView.swift */; };
+		F1BB06D927E9243100354182 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB06D827E9243100354182 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F1BB06BD27E90E3400354182 /* ReLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BB06C027E90E3400354182 /* ReLocalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLocalApp.swift; sourceTree = "<group>"; };
-		F1BB06C227E90E3400354182 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F1BB06C427E90E3700354182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1BB06C727E90E3700354182 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1BB06D127E91A6700354182 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		F1BB06D327E9215B00354182 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F1BB06D527E9219E00354182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F1BB06D827E9243100354182 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +76,27 @@
 		F1BB06D027E91A5600354182 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F1BB06C227E90E3400354182 /* ContentView.swift */,
-				F1BB06D127E91A6700354182 /* SplashScreen.swift */,
-				F1BB06D327E9215B00354182 /* MainView.swift */,
+				F1BB06D727E9240D00354182 /* SubViews */,
+				F1BB06D627E9240700354182 /* Screens */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F1BB06D627E9240700354182 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F1BB06D127E91A6700354182 /* SplashScreen.swift */,
+				F1BB06D327E9215B00354182 /* MainView.swift */,
+				F1BB06D827E9243100354182 /* HomeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F1BB06D727E9240D00354182 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1BB06D227E91A6800354182 /* SplashScreen.swift in Sources */,
+				F1BB06D927E9243100354182 /* HomeView.swift in Sources */,
 				F1BB06D427E9215B00354182 /* MainView.swift in Sources */,
-				F1BB06C327E90E3400354182 /* ContentView.swift in Sources */,
 				F1BB06C127E90E3400354182 /* ReLocalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
