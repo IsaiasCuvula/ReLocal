@@ -12,11 +12,17 @@ struct SplashScreen: View {
     @State private var isActive = false
     @State private var size = 0.8
     @State private var opacity = 0.5
+    @AppStorage("onboarding") var showOnBoarding: Bool = true
     
     var body: some View {
         VStack {
             if isActive {
-                OnboardScreen()
+                if showOnBoarding{
+                    OnboardScreen(showOnBoarding: $showOnBoarding)
+                } else {
+                    ChooseCityScreen()
+                }
+                
             } else {
                 VStack {
                     
@@ -51,6 +57,8 @@ struct SplashScreen: View {
                         .font(.largeTitle)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
+                        .scaleEffect(size)
+                        .opacity(opacity)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Color("azul"))
