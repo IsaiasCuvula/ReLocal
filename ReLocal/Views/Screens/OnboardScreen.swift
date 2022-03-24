@@ -42,12 +42,7 @@ struct OnboardScreen: View {
                     }
                 }
             }label: {
-                Text("Next")
-                    .font(.title3).bold()
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity, maxHeight: 50)
-                    .background(RoundedRectangle(cornerRadius: 10))
-                
+                CustomButtonLabel(txt: "Next")
             }
             .foregroundColor(Color("azul"))
             .padding()
@@ -70,10 +65,10 @@ struct OnboardScreen: View {
     }
 }
 
-/*
+
 struct OnboardScreen_Previews: PreviewProvider {
    
     static var previews: some View {
-        OnboardScreen()
+        OnboardScreen(showOnBoarding: .constant(true))
     }
-}*/
+}

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F172313D27ED21CD005ABEC6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172313C27ED21CD005ABEC6 /* SearchBar.swift */; };
 		F1BB06C127E90E3400354182 /* ReLocalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB06C027E90E3400354182 /* ReLocalApp.swift */; };
 		F1BB06C527E90E3700354182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BB06C427E90E3700354182 /* Assets.xcassets */; };
 		F1BB06C827E90E3700354182 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BB06C727E90E3700354182 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F172313C27ED21CD005ABEC6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F1BB06BD27E90E3400354182 /* ReLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BB06C027E90E3400354182 /* ReLocalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLocalApp.swift; sourceTree = "<group>"; };
 		F1BB06C427E90E3700354182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				F1D9D8F527EA669200EE8CCF /* OnboardingViewOne.swift */,
 				F1D9D8FA27EA6E2200EE8CCF /* OnboardingViewTwo.swift */,
 				F1D9D8FC27EA6E3400EE8CCF /* OnboardingViewThree.swift */,
+				F172313C27ED21CD005ABEC6 /* SearchBar.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				F1D9D8F427EA666900EE8CCF /* OnboardScreen.swift in Sources */,
 				F1D9D8F627EA669200EE8CCF /* OnboardingViewOne.swift in Sources */,
 				F1BB06D427E9215B00354182 /* MainView.swift in Sources */,
+				F172313D27ED21CD005ABEC6 /* SearchBar.swift in Sources */,
 				F1BB06C127E90E3400354182 /* ReLocalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

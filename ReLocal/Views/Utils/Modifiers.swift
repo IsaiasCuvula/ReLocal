@@ -43,3 +43,15 @@ struct CustomImage: View {
     }
 }
 
+struct CustomButtonLabel: View {
+    let txt: String
+    
+    var body: some View{
+        Text(txt)
+            .padding()
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity,maxHeight: 50)
+            .background(RoundedRectangle(cornerRadius: 10))
+    }
+}
+

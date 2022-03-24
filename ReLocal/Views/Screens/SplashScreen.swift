@@ -22,10 +22,8 @@ struct SplashScreen: View {
                 } else {
                     ChooseCityScreen()
                 }
-                
             } else {
                 VStack {
-                    
                     ZStack(alignment: .center) {
                         RoundedRectangle(cornerRadius: 15)
                             .frame(width: 100, height: 100)
