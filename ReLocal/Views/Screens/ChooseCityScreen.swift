@@ -23,7 +23,7 @@ struct ChooseCityScreen: View {
             
             CustomTitle(text: "Select city to explore")
             
-            SearchBar(text: $city)
+            SearchBar(text: $city, textHolder: "City name ...")
                 .padding()
             
             CustomDescription(text: "Welcome to our explore App, here you will find the best cities in the world for culture with a number of free museums to enjoy")
@@ -43,7 +43,7 @@ struct ChooseCityScreen: View {
             Spacer()
         }
         .fullScreenCover(isPresented: $showMainView) {
-            MainView()
+            MainTabView(city: $city)
         }
         .alert("City name cannot be empty",isPresented: $showAlert){}
         
