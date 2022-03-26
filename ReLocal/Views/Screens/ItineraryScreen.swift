@@ -12,74 +12,91 @@ struct ItineraryScreen: View {
     @StateObject var weekView = CalendarWeekView()
     @Namespace var animation
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading){
-                Section{
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack(spacing: 10){
-                            ForEach(weekView.currentWeek, id: \.self){ day in
-                                
-                                //EEE return day as MON, TUE, ... etc
-                                VStack(spacing: 10){
-                                    Text(weekView.extractedDate(date: day, format: "dd"))
-                                        .font(.system(size: 15))
-                                        .fontWeight(.semibold)
+       
+        ZStack(alignment: .trailing) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading){
+                    Section{
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(spacing: 10){
+                                ForEach(weekView.currentWeek, id: \.self){ day in
                                     
-                                    Text(weekView.extractedDate(date: day, format: "EEE"))
-                                        .font(.system(size: 14))
-                                    
-                                    
-                                    Circle()
-                                        .fill(.white)
-                                        .frame(width: 8, height: 8)
-                                        .opacity(weekView.isToday(date: day) ? 1 : 0)
-                                    
-                                    
-                                }
-                                .foregroundStyle(weekView.isToday(date: day) ? .primary : .secondary)
-                                .foregroundColor(weekView.isToday(date: day) ? .white : .black)
-                                .frame(width: 45, height: 90)
-                                .background(
-                                    ZStack{
-                                        if weekView.isToday(date: day) {
-                                            
-                                            Capsule()
-                                                .fill(Color("azul"))
-                                                .matchedGeometryEffect(id: "CURRENTDAY", in: animation)
-                                        }
+                                    //EEE return day as MON, TUE, ... etc
+                                    VStack(spacing: 10){
+                                        Text(weekView.extractedDate(date: day, format: "dd"))
+                                            .font(.system(size: 15))
+                                            .fontWeight(.semibold)
+                                        
+                                        Text(weekView.extractedDate(date: day, format: "EEE"))
+                                            .font(.system(size: 14))
+                                        
+                                        
+                                        Circle()
+                                            .fill(.white)
+                                            .frame(width: 8, height: 8)
+                                            .opacity(weekView.isToday(date: day) ? 1 : 0)
+                                        
+                                        
                                     }
-                                )
-                                .contentShape(Capsule())
-                                .onTapGesture {
-                                    withAnimation {
-                                        weekView.currentDay = day
+                                    .foregroundStyle(weekView.isToday(date: day) ? .primary : .secondary)
+                                    .foregroundColor(weekView.isToday(date: day) ? .white : .black)
+                                    .frame(width: 45, height: 90)
+                                    .background(
+                                        ZStack{
+                                            if weekView.isToday(date: day) {
+                                                
+                                                Capsule()
+                                                    .fill(Color("azul"))
+                                                    .matchedGeometryEffect(id: "CURRENTDAY", in: animation)
+                                            }
+                                        }
+                                    )
+                                    .contentShape(Capsule())
+                                    .onTapGesture {
+                                        withAnimation {
+                                            weekView.currentDay = day
+                                        }
                                     }
                                 }
                             }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        
+                    } header: {
+                        HeaderView()
                     }
                     
-                } header: {
-                    HeaderView()
-                }
-                
-                HStack(spacing: 40){
-                    Text("Time")
+                    HStack(spacing: 40){
+                        Text("Time")
+                        
+                        Text("Locations")
+                    }
+                    .padding()
                     
-                    Text("Locations")
-                }
-                .padding()
-                
-                VStack{
-                    ForEach(0 ... 5, id: \.self){ i in
-                        ItinerayView()
+                    VStack{
+                        ForEach(0 ... 5, id: \.self){ i in
+                            ItinerayView()
+                        }
                     }
                 }
-                
-                
-                Spacer()
             }
+            
+            
+            Button{
+                //Add new Itinerary
+                
+            } label: {
+                Image(systemName: "plus")
+                    .resizable()
+                    .foregroundColor(.white)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 24, height: 24)
+            }
+            .frame(width: 62, height: 62)
+            .background(Color("azul"))
+            .clipShape(Circle())
+            .padding()
+            .offset(y: 200)
         }
     }
     
@@ -96,12 +113,14 @@ struct ItineraryScreen: View {
             .hLeading()
             
             Button{
+                //Add new Itinerary
                 
             } label: {
                 Image("insta")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 45, height: 45)
+                    .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
             }
             
