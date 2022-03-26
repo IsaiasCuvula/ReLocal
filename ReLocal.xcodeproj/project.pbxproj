@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F172313D27ED21CD005ABEC6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172313C27ED21CD005ABEC6 /* SearchBar.swift */; };
+		F1815B5E27EFAAE6001466B2 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */; };
 		F1A37D9B27EE64500013C53D /* ItineraryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */; };
 		F1A37D9D27EE64830013C53D /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9C27EE64830013C53D /* MapScreen.swift */; };
 		F1A37D9F27EE64C80013C53D /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9E27EE64C80013C53D /* FavoriteScreen.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		F172313C27ED21CD005ABEC6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
 		F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryScreen.swift; sourceTree = "<group>"; };
 		F1A37D9C27EE64830013C53D /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		F1A37D9E27EE64C80013C53D /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				F1D9D8F727EA6AEE00EE8CCF /* Modifiers.swift */,
+				F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				F1BB06D427E9215B00354182 /* MainTabView.swift in Sources */,
 				F1A37D9F27EE64C80013C53D /* FavoriteScreen.swift in Sources */,
 				F172313D27ED21CD005ABEC6 /* SearchBar.swift in Sources */,
+				F1815B5E27EFAAE6001466B2 /* CalendarWeekView.swift in Sources */,
 				F1BB06C127E90E3400354182 /* ReLocalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

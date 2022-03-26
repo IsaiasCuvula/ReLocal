@@ -43,6 +43,19 @@ struct CustomImage: View {
     }
 }
 
+struct CardImage: View {
+    let image: String
+    
+    var body: some View{
+        Image(image)
+            .resizable()
+            .scaledToFit()
+            .aspectRatio(contentMode: .fill)
+            //.clipped()
+            //.frame(width: 305, height: 305)
+    }
+}
+
 struct CustomButtonLabel: View {
     let txt: String
     

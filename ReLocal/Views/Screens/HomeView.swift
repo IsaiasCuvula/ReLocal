@@ -94,7 +94,7 @@ struct HomeView: View {
                     LazyVGrid(columns: adaptiveColumns, spacing:20) {
                         
                         ForEach(0 ..< 4, id: \.self){ i in
-                           CardPopularView()
+                            CardPopularView(index: i)
                         }
                     }
                 }
