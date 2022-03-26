@@ -12,8 +12,8 @@ struct ItineraryScreen: View {
     @StateObject var weekView = CalendarWeekView()
     @Namespace var animation
     var body: some View {
-        ScrollView {
-            VStack{
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading){
                 Section{
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack(spacing: 10){
@@ -44,7 +44,7 @@ struct ItineraryScreen: View {
                                         if weekView.isToday(date: day) {
                                             
                                             Capsule()
-                                                .fill(.black)
+                                                .fill(Color("azul"))
                                                 .matchedGeometryEffect(id: "CURRENTDAY", in: animation)
                                         }
                                     }
@@ -63,6 +63,21 @@ struct ItineraryScreen: View {
                 } header: {
                     HeaderView()
                 }
+                
+                HStack(spacing: 40){
+                    Text("Time")
+                    
+                    Text("Locations")
+                }
+                .padding()
+                
+                VStack{
+                    ForEach(0 ... 5, id: \.self){ i in
+                        ItinerayView()
+                    }
+                }
+                
+                
                 Spacer()
             }
         }
