@@ -13,49 +13,99 @@ struct HomeView: View {
     @State private var showSelectCity = false
     @Binding var city: String
     
+    private let adaptiveColumns = [
+        GridItem(.adaptive(minimum: 170))]
+    
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment:.leading){
-                HStack {
-                    Image("locationIcon")
-                    Text(city)
-                        .font(.title).bold()
-                    
-                    Spacer()
-                    
-                    Button{
-                        withAnimation {
-                            self.showSelectCity.toggle()
+                VStack{
+                    HStack {
+                        Image("locationIcon")
+                        Text(city)
+                            .font(.title).bold()
+                        
+                        Spacer()
+                        
+                        Button{
+                            withAnimation {
+                                self.showSelectCity.toggle()
+                            }
+                        } label: {
+                            Image(systemName: "chevron.down")
+                                .foregroundColor(.black)
                         }
-                    } label: {
-                        Image(systemName: "chevron.down")
-                            .foregroundColor(.black)
+                        
+                        Spacer()
+                        
+                        Button{
+                            
+                        } label: {
+                            Image(systemName: "bell.badge")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(.gray)
+                                .padding(4)
+                        }
+                        .overlay(
+                            Circle()
+                                .stroke()
+                        )
+                        .padding(.horizontal, 10)
                     }
                     
-                    Spacer()
+                    SearchBar(text: $searchText, textHolder: "Search ...")
+                        .padding(.top)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack{
+                            ForEach(0 ..< 5, id:\.self){ index in
+                                StoryView(index: index)
+                            }
+                        }
+                        .padding(.vertical)
+                    }
+                    .padding(.vertical)
                     
                     Button{
                         
-                    } label: {
-                        Image(systemName: "bell.badge")
-                            .foregroundColor(.gray)
-                            .overlay(
-                                Circle()
-                                    .stroke())
+                    }label: {
+                        HStack{
+                            Image(systemName: "map")
+                            Text("START YOUR ITINERARY")
+                        }
+                        .padding()
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity,maxHeight: 50)
+                        .background(RoundedRectangle(cornerRadius: 15))
                     }
+                    .foregroundColor(Color("azul"))
+                }.padding()
+                
+                VStack(alignment: .leading) {
                     
-                    Spacer()
+                    Text("Popular")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding()
+                    
+                    LazyVGrid(columns: adaptiveColumns, spacing:20) {
+                        
+                        ForEach(0 ..< 4, id: \.self){ i in
+                           CardPopularView()
+                        }
+                    }
                 }
-                
-                SearchBar(text: $searchText, textHolder: "Search ...")
-                    .padding(.top)
-                
+                .padding()
             }
-            .padding()
+            Spacer()
         }
         .sheet(isPresented: $showSelectCity) {
             ChooseCityScreen()
         }
+       
     }
 }
 

@@ -11,6 +11,8 @@
 		F1A37D9B27EE64500013C53D /* ItineraryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */; };
 		F1A37D9D27EE64830013C53D /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9C27EE64830013C53D /* MapScreen.swift */; };
 		F1A37D9F27EE64C80013C53D /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9E27EE64C80013C53D /* FavoriteScreen.swift */; };
+		F1A990C027EF79290015F795 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A990BF27EF79290015F795 /* StoryView.swift */; };
+		F1A990C227EF8A2C0015F795 /* CardPopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A990C127EF8A2C0015F795 /* CardPopularView.swift */; };
 		F1BB06C127E90E3400354182 /* ReLocalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BB06C027E90E3400354182 /* ReLocalApp.swift */; };
 		F1BB06C527E90E3700354182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BB06C427E90E3700354182 /* Assets.xcassets */; };
 		F1BB06C827E90E3700354182 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BB06C727E90E3700354182 /* Preview Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryScreen.swift; sourceTree = "<group>"; };
 		F1A37D9C27EE64830013C53D /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		F1A37D9E27EE64C80013C53D /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
+		F1A990BF27EF79290015F795 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		F1A990C127EF8A2C0015F795 /* CardPopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPopularView.swift; sourceTree = "<group>"; };
 		F1BB06BD27E90E3400354182 /* ReLocal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReLocal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BB06C027E90E3400354182 /* ReLocalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLocalApp.swift; sourceTree = "<group>"; };
 		F1BB06C427E90E3700354182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				F1D9D8FA27EA6E2200EE8CCF /* OnboardingViewTwo.swift */,
 				F1D9D8FC27EA6E3400EE8CCF /* OnboardingViewThree.swift */,
 				F172313C27ED21CD005ABEC6 /* SearchBar.swift */,
+				F1A990BF27EF79290015F795 /* StoryView.swift */,
+				F1A990C127EF8A2C0015F795 /* CardPopularView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -207,7 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A990C027EF79290015F795 /* StoryView.swift in Sources */,
 				F1BB06D227E91A6800354182 /* SplashScreen.swift in Sources */,
+				F1A990C227EF8A2C0015F795 /* CardPopularView.swift in Sources */,
 				F1BB06D927E9243100354182 /* HomeView.swift in Sources */,
 				F1D9D8FD27EA6E3400EE8CCF /* OnboardingViewThree.swift in Sources */,
 				F1A37D9D27EE64830013C53D /* MapScreen.swift in Sources */,
