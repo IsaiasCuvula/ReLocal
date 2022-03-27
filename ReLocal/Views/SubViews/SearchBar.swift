@@ -18,7 +18,8 @@ struct SearchBar: View {
                 .padding(8)
                 .padding(.horizontal, 24)
                 .background(Color(.white))
-                .cornerRadius(10)
+                .overlay( RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color(.systemGray3), lineWidth: 1))
                 .overlay(
                     HStack{
                         Image(systemName: "magnifyingglass")
@@ -26,8 +27,8 @@ struct SearchBar: View {
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     }.padding(.horizontal, 6)
                 )
-                .overlay( RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color(.systemGray3), lineWidth: 1))
+                .cornerRadius(10)
+               
         }
         .padding(.horizontal, 4)
         
@@ -38,5 +39,6 @@ struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
         SearchBar(text: .constant(""), textHolder: "City name ...")
             .previewLayout(.sizeThatFits)
+            .preferredColorScheme(.dark)
     }
 }

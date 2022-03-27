@@ -6,10 +6,29 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct MapScreen: View {
+    
+    @StateObject private var viewModel = MapViewModel()
+    @State private var query = ""
+    
+   
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack(alignment: .top){
+            Map(coordinateRegion: $viewModel.region, showsUserLocation: true)
+                .ignoresSafeArea()
+                .tint(Color(.systemPink))
+            
+            SearchBar(text: $query, textHolder: "Search location")
+                .padding()
+        }
+        .onAppear{
+            viewModel.checkIfLocationServiseIsEnabled()
+        }
+           
     }
 }
 
@@ -18,3 +37,6 @@ struct MapScreen_Previews: PreviewProvider {
         MapScreen()
     }
 }
+
+
+

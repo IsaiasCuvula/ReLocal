@@ -10,6 +10,7 @@
 		F172313D27ED21CD005ABEC6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172313C27ED21CD005ABEC6 /* SearchBar.swift */; };
 		F1815B5E27EFAAE6001466B2 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */; };
 		F1815B6027EFB5B9001466B2 /* ItinerayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1815B5F27EFB5B9001466B2 /* ItinerayView.swift */; };
+		F1883A5227F0C0A700A23CE9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1883A5127F0C0A700A23CE9 /* MapViewModel.swift */; };
 		F1A37D9B27EE64500013C53D /* ItineraryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */; };
 		F1A37D9D27EE64830013C53D /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9C27EE64830013C53D /* MapScreen.swift */; };
 		F1A37D9F27EE64C80013C53D /* FavoriteScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9E27EE64C80013C53D /* FavoriteScreen.swift */; };
@@ -33,6 +34,7 @@
 		F172313C27ED21CD005ABEC6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
 		F1815B5F27EFB5B9001466B2 /* ItinerayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinerayView.swift; sourceTree = "<group>"; };
+		F1883A5127F0C0A700A23CE9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryScreen.swift; sourceTree = "<group>"; };
 		F1A37D9C27EE64830013C53D /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		F1A37D9E27EE64C80013C53D /* FavoriteScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteScreen.swift; sourceTree = "<group>"; };
@@ -65,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1883A5327F0DA7700A23CE9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */,
+				F1883A5127F0C0A700A23CE9 /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F1BB06B427E90E3400354182 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +97,7 @@
 			children = (
 				F1BB06D527E9219E00354182 /* Info.plist */,
 				F1BB06D027E91A5600354182 /* Views */,
+				F1883A5327F0DA7700A23CE9 /* ViewModels */,
 				F1BB06C027E90E3400354182 /* ReLocalApp.swift */,
 				F1BB06C427E90E3700354182 /* Assets.xcassets */,
 				F1BB06C627E90E3700354182 /* Preview Content */,
@@ -144,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				F1D9D8F727EA6AEE00EE8CCF /* Modifiers.swift */,
-				F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -230,6 +241,7 @@
 				F1D9D8FB27EA6E2200EE8CCF /* OnboardingViewTwo.swift in Sources */,
 				F1D9D8F827EA6AEF00EE8CCF /* Modifiers.swift in Sources */,
 				F1D9D8F427EA666900EE8CCF /* OnboardScreen.swift in Sources */,
+				F1883A5227F0C0A700A23CE9 /* MapViewModel.swift in Sources */,
 				F1D9D8F627EA669200EE8CCF /* OnboardingViewOne.swift in Sources */,
 				F1A37D9B27EE64500013C53D /* ItineraryScreen.swift in Sources */,
 				F1BB06D427E9215B00354182 /* MainTabView.swift in Sources */,
@@ -369,6 +381,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReLocal/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -398,6 +411,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReLocal/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to show it on map";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
