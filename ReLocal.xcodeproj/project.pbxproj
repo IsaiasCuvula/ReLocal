@@ -10,6 +10,7 @@
 		F172313D27ED21CD005ABEC6 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172313C27ED21CD005ABEC6 /* SearchBar.swift */; };
 		F1815B5E27EFAAE6001466B2 /* CalendarWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */; };
 		F1815B6027EFB5B9001466B2 /* ItinerayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1815B5F27EFB5B9001466B2 /* ItinerayView.swift */; };
+		F1835E9A27F0EDB800C21A58 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1835E9927F0EDB800C21A58 /* Place.swift */; };
 		F1883A5227F0C0A700A23CE9 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1883A5127F0C0A700A23CE9 /* MapViewModel.swift */; };
 		F1A37D9B27EE64500013C53D /* ItineraryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */; };
 		F1A37D9D27EE64830013C53D /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A37D9C27EE64830013C53D /* MapScreen.swift */; };
@@ -34,6 +35,7 @@
 		F172313C27ED21CD005ABEC6 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		F1815B5D27EFAAE6001466B2 /* CalendarWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWeekView.swift; sourceTree = "<group>"; };
 		F1815B5F27EFB5B9001466B2 /* ItinerayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItinerayView.swift; sourceTree = "<group>"; };
+		F1835E9927F0EDB800C21A58 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		F1883A5127F0C0A700A23CE9 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		F1A37D9A27EE64500013C53D /* ItineraryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryScreen.swift; sourceTree = "<group>"; };
 		F1A37D9C27EE64830013C53D /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		F1883A5827F0ED8300A23CE9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1835E9927F0EDB800C21A58 /* Place.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F1BB06B427E90E3400354182 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				F1BB06D527E9219E00354182 /* Info.plist */,
+				F1883A5827F0ED8300A23CE9 /* Model */,
 				F1BB06D027E91A5600354182 /* Views */,
 				F1883A5327F0DA7700A23CE9 /* ViewModels */,
 				F1BB06C027E90E3400354182 /* ReLocalApp.swift */,
@@ -249,6 +260,7 @@
 				F172313D27ED21CD005ABEC6 /* SearchBar.swift in Sources */,
 				F1815B5E27EFAAE6001466B2 /* CalendarWeekView.swift in Sources */,
 				F1BB06C127E90E3400354182 /* ReLocalApp.swift in Sources */,
+				F1835E9A27F0EDB800C21A58 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
