@@ -21,7 +21,12 @@ struct MainTabView: View {
                     }
                 }
                 .tabItem {
-                    Image(systemName: "house")
+                    Label {
+                        Text("Home")
+                    } icon: {
+                        Image(systemName: "house")
+                    }
+                    
                 }.tag(0)
             
             ItineraryScreen()
@@ -31,7 +36,12 @@ struct MainTabView: View {
                     }
                 }
                 .tabItem {
-                    Image(systemName: "map")
+                    Label {
+                        Text("Itinerary")
+                    } icon: {
+                        Image(systemName: "map")
+                    }
+                   
                 }.tag(1)
             
             
@@ -42,7 +52,12 @@ struct MainTabView: View {
                     }
                 }
                 .tabItem {
-                    Image(systemName: "location")
+                    Label {
+                        Text("Map")
+                    } icon: {
+                        Image(systemName: "location")
+                    }
+                    
                 }.tag(2)
             
             FavoriteScreen()
@@ -52,7 +67,11 @@ struct MainTabView: View {
                     }
                 }
                 .tabItem {
+                    Label {
+                        Text("Saved")
+                    } icon: {
                         Image(systemName: "bookmark")
+                    }
                 }.tag(3)
         }
     }
